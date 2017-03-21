@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function largest3Numbers(arr) {
+        var nums = arr.map(Number);
+
+        var numsSorted = nums.sort((a, b) => b - a);
+
+        var count = Math.min(3, arr.length);
+
+        for (var i = 0; i < count; i++){
+            console.log(numsSorted[i]);
+        }
+    }
+</script>
+</body>
+</html>

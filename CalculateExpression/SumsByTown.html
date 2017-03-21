@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function calcSumsByTown(arr) {
+
+        var objects = arr.map(JSON.parse);
+
+        var sums = {};
+
+        for (var obj of objects)
+
+            if (obj.town in sums)
+                sums[obj.town] += obj.income;
+
+            else
+                sums[obj.town] = obj.income
+
+        var towns = Object.keys(sums).sort();
+
+        for (var town of towns)
+            console.log("${town} -> ${sums[town]}");
+    }
+</script>
+</body>
+</html>
